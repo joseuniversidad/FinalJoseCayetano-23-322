@@ -18,19 +18,61 @@ public class Main {
             switch (ingresado) {
                 case 1:
                     System.out.println("Ingrese te tipos de textos");
+                    Scanner texto = new Scanner(System.in);
+                    System.out.println("Escriba el primero texto");
+                    String texto1 = texto.nextLine();
+                    System.out.println("Escriba el segundo texto");
+                    String texto2 = texto.nextLine();
+                    System.out.println("Escriba el  texto");
+                    String texto3 = texto.nextLine();
+
+                    Parametros parametros = new Parametros(texto1, texto2, texto3);
+                    parametros.concatenacion();
                     break;
                 case 2:
                     System.out.println("Ingrese un numero para realiza tabla de multiplicar");
+                    Scanner receive1 = new Scanner(System.in);
+                    System.out.print("Ingresa un número: ");
+                    int Leer2 = receive1.nextInt();
+
+                    Multiplicacion tabla = new Multiplicacion(Leer2);
+                    tabla.mostrarTabla();
                     break;
                 case 3:
-                    System.out.println("Ingrese un 2 Numeros y un Operador");
+                    Scanner scanner = new Scanner(System.in);
+
+                    System.out.print("Ingrese el primer numero: ");
+                    double num1 = scanner.nextDouble();
+                    System.out.print("Ingrese el segundo numero: ");
+                    double num2 = scanner.nextDouble();
+
+                    System.out.print("Ingresa un operador (+, -, *, /): ");
+                    char op = scanner.next().charAt(0);
+
+                    aritmeticoCalculador operadora = new aritmeticoCalculador (num1, num2, op);
+                    operadora.verificacion();
+
+                    scanner.close();
+
                     break;
                 case 4:
-                    System.out.println("Ingrese 2 Numeros para determinar si es Primo o No");
+                    System.out.println("Ingrese un Numero para determinar si es Primo o No");
+                    Scanner receive3 = new Scanner(System.in);
+                    System.out.println("Ingresa el numero");
+                    int Leer5 = receive3.nextInt();
+
+                    NumeroPrimo tabla3 = new NumeroPrimo(Leer5);
+                    tabla3.verficacion();
+
                     break;
-
-
+                case 5:
+                    Estudiante estudiante1 = new Estudiante("Jose Cayetano", "Universitario");
+                    System.out.println("Nombre del estudiante: " + estudiante1.getNombre());
+                    System.out.println("Clasificación: " + estudiante1.getClasificacion());
             }
-
     }
+
+
 }
+
+
