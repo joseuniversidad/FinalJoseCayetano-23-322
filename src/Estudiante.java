@@ -3,7 +3,7 @@ public class Estudiante {
     private String clasificacion;
 
     // Constructor
-    public Estudiante(String nombre, String clasificacion) {
+    public Estudiante(String nombre) {
         this.nombre = nombre;
         this.clasificacion = clasificacion;
     }

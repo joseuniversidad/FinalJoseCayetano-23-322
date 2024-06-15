@@ -13,7 +13,8 @@ public class Main {
             System.out.println("2. Metodo Tabla de Multiplicar");
             System.out.println("3. Metodo de Numeros y Operador");
             System.out.println("4. Metodo Determinar si es Primo o No");
-            System.out.println("5. ");
+            System.out.println("5. Estudiante con get y set");
+            System.out.println("Arrays Con estudiante");
             ingresado = opc.nextInt();
             switch (ingresado) {
                 case 1:
@@ -66,9 +67,24 @@ public class Main {
 
                     break;
                 case 5:
-                    Estudiante estudiante1 = new Estudiante("Jose Cayetano", "Universitario");
+                    Estudiante estudiante1 = new Estudiante("Jose Cayetano");
                     System.out.println("Nombre del estudiante: " + estudiante1.getNombre());
                     System.out.println("Clasificación: " + estudiante1.getClasificacion());
+                    break;
+                case 6:
+                    System.out.println("Almacenando Estudiantes en Arrays");
+                    Estudiante[] listaEstudiantes = new Estudiante[5];
+                    listaEstudiantes[0] = new Estudiante("Ana");
+                    listaEstudiantes[1] = new Estudiante("Luis");
+                    listaEstudiantes[2] = new Estudiante("Carlos");
+                    listaEstudiantes[3] = new Estudiante("Maria");
+                    listaEstudiantes[4] = new Estudiante("Jose");
+
+                    GestorEstudiantes2 gestor = new GestorEstudiantes2(listaEstudiantes);
+                    gestor.mostrarEstudiantes2();
+
+
+
             }
     }
 
